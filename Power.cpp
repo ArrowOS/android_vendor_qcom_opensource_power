@@ -30,6 +30,7 @@
 #define LOG_TAG "android.hardware.power-service-qti"
 
 #include "Power.h"
+#include "power-feature.h"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
@@ -93,6 +94,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             LOG(INFO) << "Mode " << static_cast<int32_t>(type) << "Not Supported";
             break;
     }
+    set_device_specific_feature(static_cast<feature_t>(type), enabled ? 1 : 0);
     return ndk::ScopedAStatus::ok();
 }
 
