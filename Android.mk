@@ -1,6 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_USES_QSSI),true)
 ifeq ($(call is-vendor-board-platform,QCOM),true)
 
 # HAL module implemenation stored in
@@ -86,5 +85,4 @@ LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-variable
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
-endif
 endif
