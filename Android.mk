@@ -7,12 +7,10 @@ ifeq ($(call is-vendor-board-platform,QCOM),true)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libbase libhidlbase libhidltransport libutils android.hardware.power@1.2
+LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libbase libhidlbase libhidltransport libutils android.hardware.power@1.2
 LOCAL_HEADER_LIBRARIES += libutils_headers
 LOCAL_HEADER_LIBRARIES += libhardware_headers
-LOCAL_SRC_FILES := power-common.c metadata-parser.c utils.c list.c hint-data.c powerhintparser.c service.cpp Power.cpp
-LOCAL_C_INCLUDES := external/libxml2/include \
-                    external/icu/icu4c/source/common
+LOCAL_SRC_FILES := power-common.c metadata-parser.c utils.c list.c hint-data.c service.cpp Power.cpp
 
 # Include target-specific files.
 ifeq ($(call is-board-platform-in-list, msm8974), true)
