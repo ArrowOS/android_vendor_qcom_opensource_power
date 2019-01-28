@@ -62,7 +62,8 @@ static int camera_hint_ref_count;
 static void process_video_encode_hint(void *metadata);
 //static void process_cam_preview_hint(void *metadata);
 
-static bool is_target_SDM630() /* Returns value=630 if target is SDM630 else value 0 */
+/* Returns true is target is SDM630/SDM455 else false*/
+static bool is_target_SDM630()
 {
     int fd;
     bool is_target_SDM630=false;
@@ -74,8 +75,8 @@ static bool is_target_SDM630() /* Returns value=630 if target is SDM630 else val
             is_target_SDM630 = false;
         } else {
             int soc_id = atoi(buf);
-            if (soc_id == 318 || soc_id== 327) {
-            is_target_SDM630 = true; /* Above SOCID for SDM630 */
+            if (soc_id == 318 || soc_id == 327 || soc_id == 385) {
+                is_target_SDM630 = true; /* Above SOCID for SDM630/SDM455 */
             }
         }
     }
