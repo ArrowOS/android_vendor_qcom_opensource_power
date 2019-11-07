@@ -1,4 +1,4 @@
-ifeq ($(call is-board-platform-in-list,trinket), true)
+ifeq ($(TARGET_BOARD_PLATFORM),trinket)
 TARGET_USES_NON_LEGACY_POWERHAL := false
 else
 TARGET_USES_NON_LEGACY_POWERHAL := true
