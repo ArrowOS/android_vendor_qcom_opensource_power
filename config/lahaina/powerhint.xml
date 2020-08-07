@@ -204,21 +204,69 @@
             Resources="0x40800000, 0x386, 0x40804000, 0x82C, 0x40800100, 0x253, 0x40804100, 0x506, 0x40800200, 0x399, 0x40804200, 0x840,
             0x42804000, 0x0, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
-        <!--camera general-->
-        <!--CPU-LLC BWMON - Set sample_ms 16 -->
-        <!--CPU-LLC BWMON - Set io_percent 80 -->
-        <!--CPU-LLC BWMON - Set hyst_length hyst_trigger hist memory 0 -->
+        <!--camera ZSLPreview>
+        <!--CPU-LLC BWMON - Set sample_ms 33 -->
+        <!--CPU-LLC BWMON - Set io_percent 100 -->
+        <!--CPU-LLC BWMON - Set hyst_length hist memory 0 -->
+		<!--CPU-LLC-DDR BWMON - Set sample_ms 33 -->
+        <!--CPU-LLC-DDR BWMON - Set io_percent 100 -->
+        <!--CPU-LLC-DDR BWMON - Set hyst_length hist memory 0 -->
+        <!--L CPU - Disable schedutil PL -->
+        <!--L CPU - Set hispeed load 99 -->
+		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
+        <Config
+            Id="0x00001330" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x41820000, 0x21, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x21, 0x43004000, 0x64, 0x43008000, 0, 0x41444100, 0, 0x41440100, 0x63,0x43420000, 0xC8"/>
+
+
+        <!--camera 30fps>
+        <!--CPU-LLC BWMON - Set sample_ms 33 -->
+        <!--CPU-LLC BWMON - Set io_percent 100 -->
+        <!--CPU-LLC BWMON - Set hyst_length hist memory 0 -->
+		<!--CPU-LLC-DDR BWMON - Set sample_ms 33 -->
+        <!--CPU-LLC-DDR BWMON - Set io_percent 100 -->
+        <!--CPU-LLC-DDR BWMON - Set hyst_length hist memory 0 -->
+		<!--L CPU min freq 998400 -->
+        <!--L CPU - Disable schedutil PL -->
+        <!--L CPU - Set hispeed load 99 -->
+		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
         <Config
             Id="0x00001331" Enable="true" Timeout="0" Target="lahaina"
-            Resources="0x41820000, 0x10, 0x41808000, 0x50, 0x4180C000, 0"/>
+            Resources="0x41820000, 0x21, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x21, 0x43004000, 0x64, 0x43008000, 0, 0x40800100, 0x3E6, 0x41444100, 0, 0x41440100, 0x63,0x43420000, 0xC8"/>
 
         <!--camera 60fps-->
         <!--CPU-LLC BWMON - Set sample_ms 16 -->
-        <!--CPU-LLC BWMON - Set io_percent 80 -->
-        <!--CPU-LLC BWMON - Set hyst_length hyst_trigger hist memory 0 -->
+        <!--CPU-LLC BWMON - Set io_percent 100 -->
+        <!--CPU-LLC BWMON - Set hyst_length hist memory 0 -->
+		<!--CPU-LLC-DDR BWMON - Set sample_ms 16 -->
+        <!--CPU-LLC-DDR BWMON - Set io_percent 100 -->
+        <!--CPU-LLC-DDR BWMON - Set hyst_length hist memory 0 -->
+		<!--L CPU min freq 1209600 -->
+        <!--L CPU - Disable schedutil PL -->
+        <!--L CPU - Set hispeed load 99 -->
+		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
         <Config
             Id="0x00001332" Enable="true" Timeout="0" Target="lahaina"
-            Resources="0x41820000, 0x10, 0x41808000, 0x50, 0x4180C000, 0"/>
+            Resources="0x41820000, 0x10, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x10, 0x43004000, 0x64, 0x43008000, 0, 0x40800100, 0x4B9, 0x41444100, 0, 0x41440100, 0x63, 0x43420000, 0xC8"/>
+
+        <!--camera 8k30-->
+        <!--CPU-LLC BWMON - Set sample_ms 33 -->
+        <!--CPU-LLC BWMON - Set io_percent 100 -->
+        <!--CPU-LLC BWMON - Set hyst_length hist memory 0 -->
+		<!--CPU-LLC-DDR BWMON - Set sample_ms 33 -->
+        <!--CPU-LLC-DDR BWMON - Set io_percent 100 -->
+        <!--CPU-LLC-DDR BWMON - Set hyst_length hist memory 0 -->
+		<!--L CPU min freq 1209600 -->
+        <!--L CPU - Disable schedutil PL -->
+        <!--L CPU - Set hispeed load 99 -->
+		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
+        <Config
+            Id="0x00001335" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x41820000, 0x21, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x21, 0x43004000, 0x64, 0x43008000, 0, 0x40800100, 0x4B9, 0x41444100, 0, 0x41440100, 0x63, 0x43420000, 0xC8"/>
 
         <!--video encode HFR 480 fps-->
         <!--MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1-->
