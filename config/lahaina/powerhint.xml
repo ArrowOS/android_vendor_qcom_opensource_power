@@ -204,8 +204,8 @@
             Resources="0x40800000, 0x386, 0x40804000, 0x82C, 0x40800100, 0x253, 0x40804100, 0x506, 0x40800200, 0x399, 0x40804200, 0x840,
             0x42804000, 0x0, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
 
-        <!--camera ZSLPreview>
-        <!--CPU-LLC BWMON - Set sample_ms 33 -->
+        <!--camera ZSLPreview-->
+        <!--CPU-LLC BWMON - Set sample_ms 33-->
         <!--CPU-LLC BWMON - Set io_percent 100 -->
         <!--CPU-LLC BWMON - Set hyst_length hist memory 0 -->
 		<!--CPU-LLC-DDR BWMON - Set sample_ms 33 -->
@@ -214,13 +214,13 @@
         <!--L CPU - Disable schedutil PL -->
         <!--L CPU - Set hispeed load 99 -->
 		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
-		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 - no resource id yet-->
         <Config
             Id="0x00001330" Enable="true" Timeout="0" Target="lahaina"
             Resources="0x41820000, 0x21, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x21, 0x43004000, 0x64, 0x43008000, 0, 0x41444100, 0, 0x41440100, 0x63,0x43420000, 0xC8"/>
 
 
-        <!--camera 30fps>
+        <!--camera 30fps-->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
         <!--CPU-LLC BWMON - Set io_percent 100 -->
         <!--CPU-LLC BWMON - Set hyst_length hist memory 0 -->
@@ -231,7 +231,7 @@
         <!--L CPU - Disable schedutil PL -->
         <!--L CPU - Set hispeed load 99 -->
 		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
-		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 - no resource id yet-->
         <Config
             Id="0x00001331" Enable="true" Timeout="0" Target="lahaina"
             Resources="0x41820000, 0x21, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x21, 0x43004000, 0x64, 0x43008000, 0, 0x40800100, 0x3E6, 0x41444100, 0, 0x41440100, 0x63,0x43420000, 0xC8"/>
@@ -247,7 +247,7 @@
         <!--L CPU - Disable schedutil PL -->
         <!--L CPU - Set hispeed load 99 -->
 		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
-		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 - no resource id yet-->
         <Config
             Id="0x00001332" Enable="true" Timeout="0" Target="lahaina"
             Resources="0x41820000, 0x10, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x10, 0x43004000, 0x64, 0x43008000, 0, 0x40800100, 0x4B9, 0x41444100, 0, 0x41440100, 0x63, 0x43420000, 0xC8"/>
@@ -263,7 +263,7 @@
         <!--L CPU - Disable schedutil PL -->
         <!--L CPU - Set hispeed load 99 -->
 		<!--CPU0-LLC MEM LAT - Set ratio_ceil 200 -->
-		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 -- - no resource id yet-->
+		<!--CPU0-LLC-DDR MEM LAT - Set ratio_ceil 200 - no resource id yet-->
         <Config
             Id="0x00001335" Enable="true" Timeout="0" Target="lahaina"
             Resources="0x41820000, 0x21, 0x41808000, 0x64, 0x4180C000, 0, 0x4300C000, 0x21, 0x43004000, 0x64, 0x43008000, 0, 0x40800100, 0x4B9, 0x41444100, 0, 0x41440100, 0x63, 0x43420000, 0xC8"/>
