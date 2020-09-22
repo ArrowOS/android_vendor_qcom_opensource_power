@@ -94,7 +94,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             LOG(INFO) << "Mode " << static_cast<int32_t>(type) << "Not Supported";
             break;
     }
-    set_device_specific_feature(static_cast<feature_t>(type), enabled ? 1 : 0);
+    set_device_specific_mode(static_cast<feature_t>(type), enabled);
     return ndk::ScopedAStatus::ok();
 }
 
@@ -114,6 +114,9 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
             *_aidl_return = false;
             break;
     }
+#ifdef SUPPORTS_DEVICE_SPECIFIC_MODE
+    *_aidl_return = is_device_specific_mode_supported(static_cast<feature_t>(type));
+#endif
     return ndk::ScopedAStatus::ok();
 }
 

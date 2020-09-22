@@ -24,7 +24,8 @@
 extern "C" {
 #endif
 
-void set_device_specific_feature(feature_t feature, int state);
+void set_device_specific_mode(feature_t feature, bool state);
+bool is_device_specific_mode_supported(feature_t feature);
 
 #ifdef __cplusplus
 }

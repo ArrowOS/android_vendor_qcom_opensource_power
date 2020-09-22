@@ -136,4 +136,8 @@ void set_interactive(int on) {
     }
 }
 
-void __attribute__((weak)) set_device_specific_feature(feature_t feature, int state) {}
+void __attribute__((weak)) set_device_specific_mode(feature_t feature, bool state) {}
+
+bool __attribute__((weak)) is_device_specific_mode_supported(feature_t feature) {
+    return false;
+}
