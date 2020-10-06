@@ -62,6 +62,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     switch(type){
         case Mode::DOUBLE_TAP_TO_WAKE:
         case Mode::LOW_POWER:
+        case Mode::FIXED_PERFORMANCE:
         case Mode::LAUNCH:
         case Mode::EXPENSIVE_RENDERING:
         case Mode::DEVICE_IDLE:
@@ -79,11 +80,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             power_hint(POWER_HINT_INTERACTION, NULL);
             break;
         case Mode::SUSTAINED_PERFORMANCE:
-        case Mode::FIXED_PERFORMANCE:
             power_hint(POWER_HINT_SUSTAINED_PERFORMANCE, NULL);
-            break;
-        default:
-            LOG(INFO) << "Mode " << static_cast<int32_t>(type) << "Not Supported";
             break;
     }
     return ndk::ScopedAStatus::ok();
@@ -91,17 +88,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 
 ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
     LOG(INFO) << "Power isModeSupported: " << static_cast<int32_t>(type);
-
-    switch(type){
-        case Mode::INTERACTIVE:
-        case Mode::SUSTAINED_PERFORMANCE:
-        case Mode::FIXED_PERFORMANCE:
-            *_aidl_return = true;
-            break;
-        default:
-            *_aidl_return = false;
-            break;
-    }
+    *_aidl_return = false;
     return ndk::ScopedAStatus::ok();
 }
 
