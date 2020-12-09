@@ -90,8 +90,10 @@ ifeq ($(call is-board-platform-in-list,msm8998 apq8098_latv), true)
 LOCAL_SRC_FILES += power-8998.c
 endif
 
+ifneq ($(TARGET_KERNEL_VERSION), 4.19)
 ifeq ($(call is-board-platform-in-list,sdm660), true)
 LOCAL_SRC_FILES += power-660.c
+endif
 endif
 
 ifeq ($(call is-board-platform-in-list,sdm845), true)
