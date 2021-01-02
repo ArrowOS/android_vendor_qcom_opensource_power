@@ -297,6 +297,26 @@
              Resources="0x40800000, 0x4CC, 0x40800100, 0x4CC, 0x40804000, 0x4CC, 0x40804100, 0x4CC,
              0X4280C000, 0x190, 0X42810000, 0x190, 0x42814000, 0x0"/>
 
+        <!-- multi camera 30fps-->
+        <!--L CPU CORE 0 SCHED LOAD BOOST -->
+        <!--L CPU CORE 1 SCHED LOAD BOOST -->
+        <!--L CPU CORE 2 SCHED LOAD BOOST -->
+        <!--L CPU CORE 3 SCHED LOAD BOOST -->
+        <!--L CPU CORE 4 SCHED LOAD BOOST -->
+        <!--L CPU CORE 5 SCHED LOAD BOOST -->
+        <!--L CPU CORE 6 SCHED LOAD BOOST -->
+        <!--L CPU CORE 7 SCHED LOAD BOOST -->
+        <!--L CPU cluster min freq of 1190Mhz -->
+        <!--CPUBW HWMON - Set sample_ms 50 -->
+        <!--CPUBW HWMON - Set io_percent 100 -->
+        <!--CPUBW HWMON - Set up_scale 0 -->
+        <!--L CPU core ctl min cpus 6 -->
+        <Config
+            Id="0x00001336" Enable="true" Timeout="0" Target="holi"
+            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
+            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
+            0x40800100, 1190, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6"/>
+
     </Powerhint>
 </HintConfigs>
 
