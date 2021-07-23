@@ -36,6 +36,11 @@
             Id="0x00001203" Enable="true" Target="lahaina"
             Resources="" />
 
+        <!--video decode 240fps-->
+        <Config
+            Id="0x00001501" Enable="true" Target="lahaina" Timeout="0"
+            Resources="0x43010000, 59" />
+
         <!--sustained performance-->
         <Config
             Id="0x00001206" Enable="true" Target="lahaina"
