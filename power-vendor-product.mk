@@ -17,4 +17,8 @@ else ifeq ($(TARGET_BOARD_PLATFORM),bengal)
 PRODUCT_COPY_FILES += vendor/qcom/opensource/power/config/bengal/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 else ifeq ($(TARGET_BOARD_PLATFORM),trinket)
 PRODUCT_COPY_FILES += vendor/qcom/opensource/power/config/trinket/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+else ifeq ($(TARGET_BOARD_PLATFORM),lahaina)
+PRODUCT_COPY_FILES += vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+else ifeq ($(TARGET_BOARD_PLATFORM),holi)
+PRODUCT_COPY_FILES += vendor/qcom/opensource/power/config/holi/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 endif
